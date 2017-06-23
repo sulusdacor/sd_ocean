@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<BodyPartGroupDefs>
+
+	<!-- ============= crab stuff ============== -->
+  
+  <BodyPartGroupDef>
+    <defName>sd_ocean_bodies_FrontLeftCrabClaw</defName>
+    <label>front left crab claw</label>
+  </BodyPartGroupDef>
+  
+  <BodyPartGroupDef>
+    <defName>sd_ocean_bodies_FrontRightCrabClaw</defName>
+    <label>front right crab claw</label>
+  </BodyPartGroupDef>
+
+  <BodyPartGroupDef>
+    <defName>sd_ocean_bodies_HeadCrabClaw</defName>
+    <label>crab head claw</label>
+  </BodyPartGroupDef>
+
+</BodyPartGroupDefs>

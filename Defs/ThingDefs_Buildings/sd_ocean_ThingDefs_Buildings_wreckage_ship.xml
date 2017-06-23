@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+	<!-- ========== ship wreckage abstract base ============== -->
+
+  <ThingDef Name="sd_ocean_WreckageShipBase" ParentName="BuildingBase" Abstract="True">
+    <thingClass>Building</thingClass>
+    <label>ship wreckage</label>
+	<description>These are the remains of an old ship, maybe they can yield some ressouces for your colony.(can be deconstructed)</description>
+    <category>Building</category>
+	<pathCost>15</pathCost>
+	<passability>PassThroughOnly</passability>
+    <fillPercent>0.50</fillPercent>
+    <altitudeLayer>Building</altitudeLayer>
+	<rotatable>false</rotatable>
+	<statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>-10</Beauty>
+    </statBases>
+    <tickerType>Never</tickerType>
+    <neverOverlapFloors>true</neverOverlapFloors>
+    <blockPlants>true</blockPlants>
+    <building>
+      <claimable>false</claimable>
+      <alwaysDeconstructible>true</alwaysDeconstructible>
+    </building>
+	<castEdgeShadows>false</castEdgeShadows>
+	<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+	<selectable>true</selectable>
+	<soundImpactDefault>BulletImpactGround</soundImpactDefault>
+  </ThingDef>
+
+
+	<!-- ========== ship wreckage 2x2 ============== -->
+
+  <ThingDef ParentName="sd_ocean_WreckageShipBase">
+    <defName>sd_ocean_wreckage_ship_22x</defName>
+	<graphicData>
+      <texPath>sd_ocean/buildings/wreckage_ship/2x2</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <size>(2,2)</size>
+	<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+	<killedLeavings>
+      <Steel>10</Steel>
+      <WoodLog>20</WoodLog>
+	  <ChunkSlagSteel>1</ChunkSlagSteel>
+    </killedLeavings>
+	<costList>
+		<Steel>40</Steel>
+		<WoodLog>80</WoodLog>
+	</costList>
+  </ThingDef>
+  
+  
+</ThingDefs>

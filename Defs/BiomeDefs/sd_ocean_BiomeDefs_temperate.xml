@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ======== ocean temperate  climate ==========-->
+
+  <BiomeDef>
+    <defName>sd_ocean_biome_ocean_temperate</defName>
+    <label>ocean temperate</label>
+    <description>Open ocean. Great for fish - not so great for you.</description>
+    <workerClass>sd_ocean.BiomeWorker_ocean_temperate</workerClass>
+    <canBuildBase>True</canBuildBase>
+    <texture>sd_ocean/worlds/biomes/sd_ocean_world_biome_ocean_temperate</texture>
+	<animalDensity>1.9</animalDensity>
+    <plantDensity>2.45</plantDensity>
+	<factionBaseSelectionWeight>0</factionBaseSelectionWeight> <!-- set to zero, since there are a few problems with base gen on water -->
+	<pathCost>
+		<points>
+			<li>(0, 10000)</li>
+		</points>
+    </pathCost>
+	<soundsAmbient>
+      <li>AmbientNightInsects_Standard</li>
+    </soundsAmbient>
+    <diseaseMtbDays>60</diseaseMtbDays>
+    <diseases>
+      <li>
+        <diseaseInc>Disease_Flu</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_Plague</diseaseInc>
+        <commonality>60</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_FibrousMechanites</diseaseInc>
+        <commonality>40</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_SensoryMechanites</diseaseInc>
+        <commonality>40</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_GutWorms</diseaseInc>
+        <commonality>40</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_MuscleParasites</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+    </diseases>
+	
+	<terrainsByFertility>
+		<li>
+            <terrain>Sand</terrain>
+            <min>-999</min>
+            <max>999</max>
+        </li>
+
+    </terrainsByFertility>
+	
+    <terrainPatchMakers>
+	
+	
+		<!-- island with some land if larger -->
+	  <li>
+        <perlinFrequency>0.015</perlinFrequency>
+        <thresholds>
+			<li>
+				<terrain>WaterShallow</terrain>
+					<min>0.30</min>
+					<max>0.50</max>
+			</li>
+			<li>
+				<terrain>Sand</terrain>
+					<min>0.50</min>
+					<max>0.67</max>
+			</li>
+			<li>
+				<terrain>Soil</terrain>
+					<min>0.67</min>
+					<max>1.05</max>
+			</li>
+			<li>
+				<terrain>MossyTerrain</terrain>
+					<min>1.05</min>
+					<max>1.15</max>
+			</li>
+			<li>
+				<terrain>MarshyTerrain</terrain>
+					<min>1.15</min>
+					<max>1.22</max>
+			</li>
+			<li>
+				<terrain>Marsh</terrain>
+					<min>1.22</min>
+					<max>999</max>
+			</li>
+			
+			<!-- okay values for tropic island with lot richsoil
+			<li>
+				<terrain>Soil</terrain>
+				<min>0.67</min>
+				<max>0.97</max>
+			</li>
+			<li>
+				<terrain>SoilRich</terrain>
+				<min>0.97</min>
+				<max>999</max>
+			</li>
+			-->
+        </thresholds>
+      </li>
+	  
+	  <!-- "does the water ways" out of shallow water, remove the part if you want more islands. will make it much harder! can cause problems with caravans on ocean tiles-->
+	  <li>
+        <perlinFrequency>0.020</perlinFrequency>
+        <thresholds>
+			<li>
+				<terrain>WaterShallow</terrain>
+				<min>0.10</min>
+				<max>1.50</max>
+			</li>
+        </thresholds>
+      </li>
+	  
+	  
+	  <!-- this makes the gravel areas around mountains disapear + not converted terrain-->
+
+	  <li>
+        <perlinFrequency>0.01</perlinFrequency>
+        <thresholds>
+			<li>
+				<terrain>WaterDeep</terrain>
+				<min>-999</min> 
+				<max>999</max>
+			</li>
+		  
+        </thresholds>
+      </li>
+	  
+    </terrainPatchMakers>
+	
+	<baseWeatherCommonalities>
+      <Clear>18</Clear>
+      <Fog>3</Fog>
+      <Rain>2</Rain>
+      <DryThunderstorm>1.25</DryThunderstorm>
+      <RainyThunderstorm>1.25</RainyThunderstorm>
+      <FoggyRain>1.5</FoggyRain>
+      <SnowGentle>4</SnowGentle>
+      <SnowHard>4</SnowHard>
+    </baseWeatherCommonalities>
+	
+	<wildPlants>
+	
+		<sd_ocean_plant_algae>4.75</sd_ocean_plant_algae>
+		<sd_ocean_plant_fern>6.5</sd_ocean_plant_fern>
+		<sd_ocean_plant_reed>6.5</sd_ocean_plant_reed>
+		<sd_ocean_plant_common_willow>0.5</sd_ocean_plant_common_willow>
+		<sd_ocean_plant_tree_stump>0.1</sd_ocean_plant_tree_stump>
+
+		<PlantGrass>2.3</PlantGrass>
+		<PlantTallGrass>2.0</PlantTallGrass>
+		<PlantMoss>2.3</PlantMoss>
+		
+		<PlantAstragalus>0.1</PlantAstragalus>
+		
+		<PlantRaspberry>1.2</PlantRaspberry>
+		<PlantBush>1.0</PlantBush>
+      
+		<PlantDandelion>0.2</PlantDandelion>
+		
+		<PlantTreeOak>0.5</PlantTreeOak>
+		<PlantTreePoplar>0.5</PlantTreePoplar>
+		<PlantTreePine>2.0</PlantTreePine>
+		<PlantTreeBirch>1.0</PlantTreeBirch>
+     
+    </wildPlants>
+	
+	<wildAnimals>
+		<sd_ocean_animal_crab_temperate>1.0</sd_ocean_animal_crab_temperate>
+		<sd_ocean_animal_crustcrawler>0.75</sd_ocean_animal_crustcrawler>
+		<sd_ocean_animal_bug>1.0</sd_ocean_animal_bug>
+		
+		<Tortoise>0.4</Tortoise>
+		
+		<Hare>0.3</Hare>
+		<Squirrel>0.3</Squirrel>
+		<Emu>0.1</Emu>
+		<Turkey>0.1</Turkey>
+		<Ostrich>0.1</Ostrich>
+		<Rat>0.2</Rat>
+		
+    </wildAnimals>	
+	
+  </BiomeDef>
+
+</Defs>

@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+	<!-- =============== abstract recipe ============== -->
+
+	<RecipeDef Name="sd_ocean_breakdown_brokencomponent_base" Abstract="True">
+		
+		<description>Converts broken components into steel. (1 broken component = 2 steel)</description>
+		<workerCounterClass>RecipeWorkerCounter_MakeStoneBlocks</workerCounterClass>
+		<jobString>breaking down component parts into steel.</jobString>
+		<workSpeedStat>StonecuttingSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.25</workSkillLearnFactor>
+		<effectWorking>CutStone</effectWorking>
+		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+		<recipeUsers>
+			<li>TableStonecutter</li>
+		</recipeUsers>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>sd_ocean_brokencomponent</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<specialProducts>
+			<li>Butchery</li>
+		</specialProducts>
+	</RecipeDef>
+	
+	<RecipeDef Name="sd_ocean_repair_brokencomponent_base" Abstract="True">
+		<description>Converts broken components into components. (3 broken component = 1 component)</description>
+		<workerCounterClass>RecipeWorkerCounter_MakeStoneBlocks</workerCounterClass>
+		<jobString>repairing broken components.</jobString>
+		<workSpeedStat>StonecuttingSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.25</workSkillLearnFactor>
+		<effectWorking>CutStone</effectWorking>
+		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+		<recipeUsers>
+			<li>ComponentAssemblyBench</li>
+		</recipeUsers>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>sd_ocean_brokencomponent</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	
+	<!-- =============== recipe for 1 brokencomponent ============== -->
+	
+	<RecipeDef ParentName="sd_ocean_breakdown_brokencomponent_base">
+		<defName>sd_ocean_breakdown_brokencomponent</defName>
+		<label>break down broken component</label>
+		<workAmount>1500</workAmount>
+		<targetCountAdjustment>2</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>sd_ocean_brokencomponent</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="sd_ocean_repair_brokencomponent_base">
+		<defName>sd_ocean_repair_brokencomponent</defName>
+		<label>repair broken component</label>
+		<workAmount>1000</workAmount>
+		<targetCountAdjustment>1</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>sd_ocean_brokencomponent</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<products>
+			<Component>1</Component>
+		</products>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>10</minLevel>
+			</li>
+		</skillRequirements>
+	</RecipeDef>
+
+	<!-- =============== recipe for 5 brokencomponent ============== -->
+
+	<RecipeDef ParentName="sd_ocean_breakdown_brokencomponent_base">
+		<defName>sd_ocean_breakdown_brokencomponent_5times</defName>
+		<label>break down broken component(5)</label>
+		<workAmount>7500</workAmount>
+		<targetCountAdjustment>10</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>sd_ocean_brokencomponent</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="sd_ocean_repair_brokencomponent_base">
+		<defName>sd_ocean_repair_brokencomponent_5times</defName>
+		<label>repair broken component(5)</label>
+		<workAmount>5000</workAmount>
+		<targetCountAdjustment>5</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>sd_ocean_brokencomponent</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+			<Component>5</Component>
+		</products>
+	</RecipeDef>
+	
+</RecipeDefs>

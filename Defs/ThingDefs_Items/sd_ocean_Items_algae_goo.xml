@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>sd_ocean_algae_goo</defName>
+    <label>algae goo</label>
+    <description>Raw algae don't look tasty, but they are food at least.</description>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <graphicData>
+		<texPath>sd_ocean/items/algae_goo/sd_ocean_item_algaegoo</texPath>
+    </graphicData>
+    <statBases>
+		<MarketValue>2</MarketValue>
+    </statBases>
+    <ingestible>
+		<foodType>Seed</foodType>
+    </ingestible>
+    <comps>
+		<li Class="CompProperties_Rottable">
+			<daysToRotStart>40</daysToRotStart>
+			<rotDestroys>true</rotDestroys>
+		</li>
+    </comps>
+  </ThingDef>
+  
+</Defs>

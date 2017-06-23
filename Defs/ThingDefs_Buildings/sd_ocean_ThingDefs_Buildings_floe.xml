@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+	<!-- ========== ice floe abstract base ============== -->
+
+	<ThingDef Name="sd_ocean_FloeBase" ParentName="sd_ocean_NaturalBase" Abstract="True">
+    <thingClass>Building</thingClass>
+    <label>ice floe</label>
+	<description>Natural ice floes drifting here from the colder parts of the planet, when the sea ice melts. (can be destroyed)</description>
+    <pathCost>15</pathCost>
+    <altitudeLayer>Floor</altitudeLayer>
+	<rotatable>false</rotatable>
+	<statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>-10</Beauty>
+    </statBases>
+    <tickerType>Never</tickerType>
+    <neverOverlapFloors>true</neverOverlapFloors>
+    <blockPlants>true</blockPlants>
+    <building>
+      <isEdifice>false</isEdifice>
+      <claimable>false</claimable>
+      <deconstructible>false</deconstructible>
+    </building>
+	<castEdgeShadows>false</castEdgeShadows>
+	<terrainAffordanceNeeded>Undefined</terrainAffordanceNeeded>
+  </ThingDef>
+  
+  <!-- ========== ice floe 1x1 ============== -->
+
+  <ThingDef ParentName="sd_ocean_FloeBase">
+    <defName>sd_ocean_floe_11x</defName>
+	<graphicData>
+      <texPath>sd_ocean/buildings/floes/1x1</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+  </ThingDef>
+
+
+	<!-- ========== ice floe 2x2 ============== -->
+
+  <ThingDef ParentName="sd_ocean_FloeBase">
+    <defName>sd_ocean_floe_22x</defName>
+	<graphicData>
+      <texPath>sd_ocean/buildings/floes/2x2</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <size>(2,2)</size>
+  </ThingDef>
+  
+  <!-- ========== ice floe 3x3 ============== -->
+
+  <ThingDef ParentName="sd_ocean_FloeBase">
+    <defName>sd_ocean_floe_33x</defName>
+	<graphicData>
+      <texPath>sd_ocean/buildings/floes/3x3</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <size>(3,3)</size>
+  </ThingDef>
+  
+  
+</ThingDefs>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+	<!-- 	abstract for retrievalstation recipe 	-->
+	
+	<RecipeDef Name="sd_ocean_retrieveBase" Abstract="True">
+		<description>This makes your colonists search the wreckage down there for some ressouces. (mining job with a lot of time investment)</description>
+		<workAmount>5000</workAmount>
+		<efficiencyStat>MiningSpeed</efficiencyStat>
+		<effectWorking>CutStone</effectWorking>
+		<workSkillLearnFactor>0.2</workSkillLearnFactor>
+		<workSkill>Mining</workSkill>
+		<recipeUsers>
+			<li>sd_ocean_retrievalstation</li>
+		</recipeUsers>
+	</RecipeDef>
+	
+	<!-- recipes 	-->
+	
+	<RecipeDef ParentName="sd_ocean_retrieveBase">
+		<defName>sd_ocean_retrieve_driftwood</defName>
+		<label>searching for driftwood</label>
+		<jobString>Searching for driftwood.</jobString>
+		<products>
+			<sd_ocean_driftwood>1</sd_ocean_driftwood>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="sd_ocean_retrieveBase">
+		<defName>sd_ocean_retrieve_steelchunk</defName>
+		<label>searching for steel slag chunk</label>
+		<jobString>Searching for steel slag chunk.</jobString>
+		<products>
+			<ChunkSlagSteel>1</ChunkSlagSteel>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="sd_ocean_retrieveBase">
+		<defName>sd_ocean_retrieve_brokencomponent</defName>
+		<label>searching for broken component</label>
+		<jobString>Searching for broken component.</jobString>
+		<products>
+			<sd_ocean_brokencomponent>1</sd_ocean_brokencomponent>
+		</products>
+	</RecipeDef>	
+
+</RecipeDefs>

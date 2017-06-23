@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ===============  crabs abstract thingdef ======================================= -->
+
+	<ThingDef Abstract="True" ParentName="sd_ocean_BaseCrustAnimal" Name="sd_ocean_BaseCrabThing">
+
+    <description>A deadly and delicious crab. It most commonly found in the wet biomes of the Rimworlds.</description>
+    <statBases>
+      <MoveSpeed>2.7</MoveSpeed>
+	  <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+      <MarketValue>100</MarketValue>
+	  <LeatherAmount>0</LeatherAmount>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+        <meleeDamageDef>Cut</meleeDamageDef>
+        <linkedBodyPartsGroup>sd_ocean_bodies_FrontLeftCrabClaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>10</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+	  <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+        <meleeDamageDef>Cut</meleeDamageDef>
+        <linkedBodyPartsGroup>sd_ocean_bodies_FrontRightCrabClaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>10</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.9</defaultCooldownTime>
+        <meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+        <meleeDamageDef>Cut</meleeDamageDef>
+        <linkedBodyPartsGroup>sd_ocean_bodies_HeadCrabClaw</linkedBodyPartsGroup>
+      </li>
+    </verbs>
+    <race>
+      <body>sd_ocean_crab_body</body>
+	  <herdAnimal>true</herdAnimal>
+      <baseBodySize>0.2</baseBodySize>
+      <baseHungerRate>0.10</baseHungerRate>
+      <baseHealthScale>0.4</baseHealthScale>
+      <wildness>0.55</wildness>
+      <foodType>OmnivoreAnimal</foodType>
+      <meatLabel>crabflesh</meatLabel>
+      <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <gestationPeriodDays>7.5</gestationPeriodDays>	  
+      <lifeExpectancy>20</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>EusocialInsectLarva</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>EusocialInsectJuvenile</def>
+          <minAge>0.03</minAge>
+        </li>
+        <li>
+          <def>EusocialInsectAdult</def>
+          <minAge>0.4</minAge>
+          <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
+          <soundDeath>Pawn_Megascarab_Death</soundDeath>
+          <soundCall>Pawn_Megascarab_Call</soundCall>
+          <soundAngry>Pawn_Megascarab_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <li>Insectoid</li>
+    </tradeTags>
+  </ThingDef>
+  
+  <!-- ===============  pawnkinddef base for all crabs ======================================= -->
+
+  <PawnKindDef Abstract="True" ParentName="AnimalKindBase" Name="sd_ocean_BaseCrabPawn">
+    <combatPower>35</combatPower>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>1</wildSpawn_EcoSystemWeight>
+	<wildSpawn_GroupSizeRange>
+      <min>3</min>
+      <max>9</max>
+    </wildSpawn_GroupSizeRange>
+  </PawnKindDef>  
+
+  
+  
+  
+  <!-- ===============  ice crab ======================================= -->
+
+  <ThingDef ParentName="sd_ocean_BaseCrabThing">
+    <defName>sd_ocean_animal_crab_cold</defName>
+    <label>ice crab</label>
+	<statBases>
+	      <ComfyTemperatureMin>-50</ComfyTemperatureMin>
+	</statBases>
+  </ThingDef>
+  
+  <!-- -->
+  
+  <PawnKindDef ParentName="sd_ocean_BaseCrabPawn">
+    <defName>sd_ocean_animal_crab_cold</defName>
+    <label>ice crab</label>
+    <race>sd_ocean_animal_crab_cold</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>sd_ocean/animals/crab/sd_ocean_animal_crab</texPath>
+          <drawSize>0.9</drawSize>
+		  <color>(230,225,205)</color>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>0.9</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>sd_ocean/animals/crab/sd_ocean_animal_crab</texPath>
+          <drawSize>1.2</drawSize>
+		  <color>(230,225,205)</color>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+	  <li>
+        <bodyGraphicData>
+          <texPath>sd_ocean/animals/crab/sd_ocean_animal_crab</texPath>
+          <drawSize>1.5</drawSize>
+          <color>(230,225,205)</color>
+          <shadowData>
+            <volume>(0.25, 0.45, 0.25)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+  <!-- ===============  beach crab ======================================= -->
+
+  <ThingDef ParentName="sd_ocean_BaseCrabThing">
+    <defName>sd_ocean_animal_crab_temperate</defName>
+    <label>beach crab</label>
+	<statBases>
+	      <ComfyTemperatureMin>-25</ComfyTemperatureMin>
+	</statBases>
+  </ThingDef>
+  
+  <!-- -->
+  
+  <PawnKindDef ParentName="sd_ocean_BaseCrabPawn">
+    <defName>sd_ocean_animal_crab_temperate</defName>
+    <label>beach crab</label>
+    <race>sd_ocean_animal_crab_temperate</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>sd_ocean/animals/crab/sd_ocean_animal_crab</texPath>
+          <drawSize>0.9</drawSize>
+		  <color>(165,150,120)</color>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>0.9</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>sd_ocean/animals/crab/sd_ocean_animal_crab</texPath>
+          <drawSize>1.2</drawSize>
+		  <color>(165,150,120)</color>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+	  <li>
+        <bodyGraphicData>
+          <texPath>sd_ocean/animals/crab/sd_ocean_animal_crab</texPath>
+          <drawSize>1.5</drawSize>
+          <color>(165,150,120)</color>
+          <shadowData>
+            <volume>(0.25, 0.45, 0.25)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+  <!-- ===============  red crab ======================================= -->
+
+  <ThingDef ParentName="sd_ocean_BaseCrabThing">
+    <defName>sd_ocean_animal_crab_hot</defName>
+    <label>red crab</label>
+	<statBases>
+	      <ComfyTemperatureMin>0</ComfyTemperatureMin>
+	</statBases>
+  </ThingDef>
+  
+  <!-- -->
+  
+  <PawnKindDef ParentName="sd_ocean_BaseCrabPawn">
+    <defName>sd_ocean_animal_crab_hot</defName>
+    <label>red crab</label>
+    <race>sd_ocean_animal_crab_hot</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>sd_ocean/animals/crab/sd_ocean_animal_crab</texPath>
+          <drawSize>0.9</drawSize>
+		  <color>(188,101,77)</color>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>0.9</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>sd_ocean/animals/crab/sd_ocean_animal_crab</texPath>
+          <drawSize>1.2</drawSize>
+		  <color>(188,101,77)</color>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+	  <li>
+        <bodyGraphicData>
+          <texPath>sd_ocean/animals/crab/sd_ocean_animal_crab</texPath>
+          <drawSize>1.5</drawSize>
+          <color>(188,101,77)</color>
+          <shadowData>
+            <volume>(0.25, 0.45, 0.25)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+</Defs>
