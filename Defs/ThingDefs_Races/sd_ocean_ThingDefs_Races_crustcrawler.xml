@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ===============  crustcrawler abstract thingdef ======================================= -->
+
+	<ThingDef Abstract="True" ParentName="sd_ocean_BaseCrustAnimal" Name="sd_ocean_BaseCrustcrawlerThing">
+
+    <description>Surviving even the hardest conditions, these creature inhabitated nearly every Rimworld planet.</description>
+    <statBases>
+      <MoveSpeed>2.7</MoveSpeed>
+	  <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+      <MarketValue>100</MarketValue>
+	  <LeatherAmount>0</LeatherAmount>
+	  <ToxicSensitivity>0</ToxicSensitivity>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.9</defaultCooldownTime>
+        <meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+        <meleeDamageDef>Cut</meleeDamageDef>
+        <linkedBodyPartsGroup>sd_ocean_bodies_HeadCrabClaw</linkedBodyPartsGroup>
+      </li>
+    </verbs>
+    <race>
+      <body>sd_ocean_crustcrawler_body</body>
+	  <herdAnimal>true</herdAnimal>
+      <baseBodySize>0.2</baseBodySize>
+      <baseHungerRate>0.10</baseHungerRate>
+      <baseHealthScale>0.4</baseHealthScale>
+      <wildness>0.55</wildness>
+      <foodType>OmnivoreAnimal</foodType>
+      <meatLabel>crustcrawlerflesh</meatLabel>
+      <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <gestationPeriodDays>7.5</gestationPeriodDays>	  
+      <lifeExpectancy>100</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>EusocialInsectLarva</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>EusocialInsectJuvenile</def>
+          <minAge>0.03</minAge>
+        </li>
+        <li>
+          <def>EusocialInsectAdult</def>
+          <minAge>0.4</minAge>
+          <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
+          <soundDeath>Pawn_Megascarab_Death</soundDeath>
+          <soundCall>Pawn_Megascarab_Call</soundCall>
+          <soundAngry>Pawn_Megascarab_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <li>Insectoid</li>
+    </tradeTags>
+  </ThingDef>
+  
+  <!-- ===============  pawnkinddef base for all crustcrawlers ======================================= -->
+
+  <PawnKindDef Abstract="True" ParentName="AnimalKindBase" Name="sd_ocean_BaseCrustcrawlerPawn">
+    <combatPower>35</combatPower>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>1</wildSpawn_EcoSystemWeight>
+	<wildSpawn_GroupSizeRange>
+      <min>2</min>
+      <max>4</max>
+    </wildSpawn_GroupSizeRange>
+  </PawnKindDef>  
+
+  
+  
+  
+  <!-- ===============  crustcrawler ======================================= -->
+
+  <ThingDef ParentName="sd_ocean_BaseCrustcrawlerThing">
+    <defName>sd_ocean_animal_crustcrawler</defName>
+    <label>crustcrawler</label>
+	<statBases>
+	      <ComfyTemperatureMin>-50</ComfyTemperatureMin>
+	</statBases>
+  </ThingDef>
+  
+  <!-- -->
+  
+  <PawnKindDef ParentName="sd_ocean_BaseCrustcrawlerPawn">
+    <defName>sd_ocean_animal_crustcrawler</defName>
+    <label>crustcrawler</label>
+    <race>sd_ocean_animal_crustcrawler</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>sd_ocean/animals/crustcrawler/sd_ocean_animal_crustcrawler</texPath>
+          <drawSize>0.9</drawSize>
+		  <color>(132,100,84)</color>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>0.9</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>sd_ocean/animals/crustcrawler/sd_ocean_animal_crustcrawler</texPath>
+          <drawSize>1.2</drawSize>
+		  <color>(132,100,84)</color>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+	  <li>
+        <bodyGraphicData>
+          <texPath>sd_ocean/animals/crustcrawler/sd_ocean_animal_crustcrawler</texPath>
+          <drawSize>1.5</drawSize>
+          <color>(132,100,84)</color>
+          <shadowData>
+            <volume>(0.25, 0.45, 0.25)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+</Defs>

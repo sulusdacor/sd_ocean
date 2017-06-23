@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+	<!-- ========================= algaefarm abstract ==========================-->
+	
+	<ThingDef ParentName="BuildingBase" Name="sd_ocean_algaefarmbase" Abstract="True">
+    <label>algae farm</label>
+    <description>Grows algae.</description>
+    <thingClass>sd_ocean.Building_algaefarm</thingClass>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>false</castEdgeShadows>
+    <fillPercent>0.30</fillPercent>
+    <size>(1,1)</size>
+    <building>
+		<defaultPlantToGrow>sd_ocean_plant_algae</defaultPlantToGrow>
+		<sowTag>algaefarm</sowTag>
+    </building>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <researchPrerequisites>
+		<li>Hydroponics</li>
+	</researchPrerequisites>
+    <designationCategory>Production</designationCategory>
+	<rotatable>true</rotatable>
+	<holdsRoof>false</holdsRoof>
+  </ThingDef>
+
+  <!-- ========================= algaefarm no power in water ==========================-->
+
+  <ThingDef ParentName="sd_ocean_algaefarmbase">
+    <defName>sd_ocean_algaefarm_water</defName>
+    <graphicData>
+      <texPath>sd_ocean/buildings/algaefarm_linkable/sd_ocean_linkable_algaefarm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Custom3</li>
+      </linkFlags>
+    </graphicData>
+	<uiIconPath>sd_ocean/menu_icons/sd_ocean_linkable_algaefarm_menuicon</uiIconPath>
+	<placingDraggableDimensions>1</placingDraggableDimensions>
+    <pathCost>60</pathCost>
+    <constructEffect>ConstructWood</constructEffect>
+    <statBases>
+      <WorkToBuild>2800</WorkToBuild>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+	  <Beauty>-1</Beauty>
+      <Cleanliness>-3</Cleanliness>
+    </statBases>
+    <size>(1,1)</size>
+	<CostList>
+		<WoodLog>50</WoodLog>
+    </CostList>
+    <fertility>1.4</fertility>
+    <building>
+		<defaultPlantToGrow>sd_ocean_plant_algae</defaultPlantToGrow>
+		<sowTag>algaefarm</sowTag>
+    </building>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <researchPrerequisites>
+		<li>sd_ocean_research_algaefarm</li>
+	</researchPrerequisites>
+    <terrainAffordanceNeeded>Undefined</terrainAffordanceNeeded>
+    <designationCategory>Production</designationCategory>
+	<neverOverlapFloors>true</neverOverlapFloors>
+	<placeWorkers>
+      <li>sd_ocean.PlaceWorker_onlyonshallowwater</li>
+    </placeWorkers>
+  </ThingDef>
+
+  
+</ThingDefs>

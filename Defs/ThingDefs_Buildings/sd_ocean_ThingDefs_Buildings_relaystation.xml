@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+	<!-- ========== reroute station ============== -->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>sd_ocean_relaystation</defName>
+	<thingClass>Building</thingClass>
+    <label>relay station</label>
+	<description>Long cables connect this swimming island to the wreckage in the sea. You are not sure how safe this is, but for the moment it seems to work.</description>
+    <altitudeLayer>Building</altitudeLayer>
+	<graphicData>
+      <texPath>sd_ocean/buildings/relaystation/sd_ocean_relaystation</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <size>(3,3)</size>
+	<passability>PassThroughOnly</passability>
+	<pathCost>70</pathCost>
+	<blockWind>true</blockWind>
+	<fillPercent>1</fillPercent>
+	<castEdgeShadows>true</castEdgeShadows>
+	<statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>-4</Beauty>
+    </statBases>
+	<costList>
+      <Steel>100</Steel>
+      <Component>2</Component>
+    </costList>
+	<comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlantSteam</compClass>
+        <basePowerConsumption>-1000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+	  <li Class="CompProperties_Flickable" />
+	  <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(233,214,180,0)</glowColor>
+      </li>
+    </comps>
+	<rotatable>false</rotatable>
+    <terrainAffordanceNeeded>Undefined</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+	<staticSunShadowHeight>1.0</staticSunShadowHeight>
+	<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
+			<ignoreNeedsPower>true</ignoreNeedsPower>
+    </building>
+    <constructEffect>ConstructMetal</constructEffect>
+	<researchPrerequisites>
+		<li>sd_ocean_research_relaystation</li>
+	</researchPrerequisites>
+	<placeWorkers>
+			<li>sd_ocean.Placeworker_onwaterglowspot</li>
+	</placeWorkers>
+	<minifiedDef>MinifiedFurniture</minifiedDef>
+  </ThingDef>
+  
+  
+</ThingDefs>

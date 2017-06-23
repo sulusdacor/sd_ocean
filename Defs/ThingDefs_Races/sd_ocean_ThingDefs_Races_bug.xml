@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ===============  bug abstract thingdef ======================================= -->
+
+	<ThingDef Abstract="True" ParentName="sd_ocean_BaseCrustAnimal" Name="sd_ocean_BaseBugThing">
+
+    <description>Surviving even the hardest conditions, these creature inhabitated nearly every Rimworld planet.</description>
+    <statBases>
+      <MoveSpeed>2.7</MoveSpeed>
+	  <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+      <MarketValue>100</MarketValue>
+	  <LeatherAmount>0</LeatherAmount>
+	  <ToxicSensitivity>0</ToxicSensitivity>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.9</defaultCooldownTime>
+        <meleeDamageBaseAmount>1</meleeDamageBaseAmount>
+        <meleeDamageDef>Cut</meleeDamageDef>
+        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+      </li>
+    </verbs>
+    <race>
+      <body>sd_ocean_bug_body</body>
+	  <herdAnimal>true</herdAnimal>
+      <baseBodySize>0.2</baseBodySize>
+      <baseHungerRate>0.10</baseHungerRate>
+      <baseHealthScale>0.4</baseHealthScale>
+      <wildness>0.55</wildness>
+      <foodType>OmnivoreAnimal</foodType>
+      <meatLabel>crustcrawlerflesh</meatLabel>
+      <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <gestationPeriodDays>7.5</gestationPeriodDays>	  
+      <lifeExpectancy>100</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>EusocialInsectLarva</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>EusocialInsectJuvenile</def>
+          <minAge>0.03</minAge>
+        </li>
+        <li>
+          <def>EusocialInsectAdult</def>
+          <minAge>0.4</minAge>
+          <soundWounded>Pawn_Megascarab_Wounded</soundWounded>
+          <soundDeath>Pawn_Megascarab_Death</soundDeath>
+          <soundCall>Pawn_Megascarab_Call</soundCall>
+          <soundAngry>Pawn_Megascarab_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+	  
+	  	<!--	remove below if not in other biomes wanted, only low base values	-->
+	  
+		<wildBiomes>
+			<AridShrubland>0.05</AridShrubland>
+			<Desert>0.05</Desert>
+			<ExtremeDesert>0.05</ExtremeDesert>
+			<Tundra>0.05</Tundra>
+			<BorealForest>0.05</BorealForest>
+			<TemperateForest>0.05</TemperateForest>
+			<TropicalRainforest>0.05</TropicalRainforest>
+		</wildBiomes>
+    </race>
+    <tradeTags>
+      <li>Insectoid</li>
+    </tradeTags>	
+  </ThingDef>
+  
+  <!-- ===============  pawnkinddef base for all bugs ======================================= -->
+
+  <PawnKindDef Abstract="True" ParentName="AnimalKindBase" Name="sd_ocean_BaseBugPawn">
+    <combatPower>35</combatPower>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>1</wildSpawn_EcoSystemWeight>
+	<wildSpawn_GroupSizeRange>
+      <min>3</min>
+      <max>5</max>
+    </wildSpawn_GroupSizeRange>
+  </PawnKindDef>  
+  
+  <!-- ===============  bug ======================================= -->
+
+  <ThingDef ParentName="sd_ocean_BaseBugThing">
+    <defName>sd_ocean_animal_bug</defName>
+    <label>bug</label>
+	<statBases>
+	      <ComfyTemperatureMin>0</ComfyTemperatureMin>
+	</statBases>
+	
+  </ThingDef>
+  
+  <!-- -->
+  
+  <PawnKindDef ParentName="sd_ocean_BaseBugPawn">
+    <defName>sd_ocean_animal_bug</defName>
+    <label>bug</label>
+    <race>sd_ocean_animal_bug</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>sd_ocean/animals/bug/sd_ocean_animal_bug</texPath>
+          <drawSize>0.6</drawSize>
+		  <color>(144,80,29)</color>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>0.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>sd_ocean/animals/bug/sd_ocean_animal_bug</texPath>
+          <drawSize>0.65</drawSize>
+		  <color>(144,80,29)</color>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>0.65</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+	  <li>
+        <bodyGraphicData>
+          <texPath>sd_ocean/animals/bug/sd_ocean_animal_bug</texPath>
+          <drawSize>0.7</drawSize>
+          <color>(144,80,29)</color>
+          <shadowData>
+            <volume>(0.25, 0.45, 0.25)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>0.7</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+</Defs>

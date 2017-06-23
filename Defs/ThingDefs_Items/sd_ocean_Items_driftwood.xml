@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ChunkBase">
+    <defName>sd_ocean_driftwood</defName>
+    <label>driftwood</label>
+	<description>A piece of wood formed by the oceans powers. It can be converted into usable wood logs at the crafting spot.</description>
+    <graphicData>
+      <texPath>sd_ocean/items/driftwood</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+	  <color>(135,110,80)</color>
+    </graphicData>
+	<statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>1</Flammability>
+      <Mass>10</Mass>
+    </statBases>
+    <soundDrop>Wood_Drop</soundDrop>
+    <thingCategories>
+      <li>Chunks</li>
+    </thingCategories>
+	<butcherProducts>
+      <WoodLog>10</WoodLog>
+    </butcherProducts>
+	<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+  </ThingDef>
+	
+  
+</Defs>

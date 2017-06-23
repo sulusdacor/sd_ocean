@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--
+  <MapGeneratorDef>
+    <defName>BasicMapGenerator</defName>
+    <selectionWeight>0</selectionWeight>
+  </MapGeneratorDef>
+  
+  -->
+  
+  <!-- rockchunks+rubble on land in ocean tiles -->
+  
+  <GenStepDef>
+    <defName>sd_ocean_genstep_RockChunks</defName>
+    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <order>233</order>
+    <genStep Class="sd_ocean.GenStep_RockChunks_ocean"/>
+  </GenStepDef>
+  
+  <!-- driftwood on land scattered in ocean tiles -->
+  
+  <GenStepDef>
+    <defName>sd_ocean_genstep_driftwood</defName>
+    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <order>244</order>
+    <genStep Class="sd_ocean.GenStep_driftwood_ocean"/>
+  </GenStepDef>
+  
+  <!-- Empty ruins in ocean tiles -->
+  
+  <GenStepDef>
+    <defName>sd_ocean_genstep_ScatterRuinsSimple</defName>
+    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <order>311</order>
+    <genStep Class="GenStep_ScatterRuinsSimple">
+			<allowOnWater>true</allowOnWater>
+			<countPer10kCellsRange>
+				<min>0</min>
+				<max>2</max>
+			</countPer10kCellsRange>
+    </genStep>
+  </GenStepDef>
+  
+  <!-- Steam geysers in ocean tiles -->
+  
+  <GenStepDef>
+    <defName>sd_ocean_genstep_SteamGeysers</defName>
+    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <order>522</order>
+    <genStep Class="sd_ocean.GenStep_ScatterThings_ocean">
+      <thingDef>SteamGeyser</thingDef>
+			<allowOnWater>false</allowOnWater>
+			<minSpacing>25</minSpacing>
+      <extraNoBuildEdgeDist>4</extraNoBuildEdgeDist>
+      <countPer10kCellsRange>
+        <min>0.3</min>
+        <max>0.5</max>
+      </countPer10kCellsRange>
+      <clearSpaceSize>30</clearSpaceSize>
+      <neededTerrainAffordance>Heavy</neededTerrainAffordance>
+      <validators>
+        <li Class="ScattererValidator_Buildable">
+          <radius>4</radius>
+          <affordance>Heavy</affordance>
+        </li>
+        <li Class="ScattererValidator_NoNonNaturalEdifices">
+          <radius>4</radius>
+        </li>
+      </validators>
+	  <warnOnFail>false</warnOnFail>
+    </genStep>
+  </GenStepDef>
+  
+   <!-- waterglowspots -->
+  
+  <GenStepDef>
+    <defName>sd_ocean_genstep_waterglowspot</defName>
+    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <order>523</order>
+    <genStep Class="sd_ocean.GenStep_ScatterThings_ocean">
+      <thingDef>sd_ocean_waterglowspot</thingDef>
+			<allowOnWater>true</allowOnWater>
+			<minSpacing>25</minSpacing>
+      <extraNoBuildEdgeDist>4</extraNoBuildEdgeDist>
+      <countPer10kCellsRange>
+        <min>0.7</min>
+        <max>1.0</max>
+      </countPer10kCellsRange>
+      <clearSpaceSize>30</clearSpaceSize>
+      <neededTerrainAffordance>Undefined</neededTerrainAffordance>
+      <validators>
+        <li Class="ScattererValidator_Buildable">
+          <radius>4</radius>
+          <affordance>Undefined</affordance>
+        </li>
+        <li Class="ScattererValidator_NoNonNaturalEdifices">
+          <radius>4</radius>
+        </li>
+      </validators>
+	  <warnOnFail>false</warnOnFail>
+    </genStep>
+  </GenStepDef>
+  
+  <!-- rockformation 1x1 -->
+  
+  <GenStepDef>
+    <defName>sd_ocean_genstep_rockformation_11x</defName>
+    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <order>533</order>
+    <genStep Class="sd_ocean.GenStep_ScatterThings_ocean">
+      <thingDef>sd_ocean_rockformation_11x</thingDef>
+			<allowOnWater>false</allowOnWater>
+			<minSpacing>15</minSpacing>
+      <extraNoBuildEdgeDist>0</extraNoBuildEdgeDist>
+      <countPer10kCellsRange>
+        <min>1</min>
+        <max>3</max>
+      </countPer10kCellsRange>
+      <clearSpaceSize>15</clearSpaceSize>
+      <neededTerrainAffordance>Light</neededTerrainAffordance>
+      <validators>
+        <li Class="ScattererValidator_Buildable">
+          <radius>4</radius>
+          <affordance>Light</affordance>
+        </li>
+        <li Class="ScattererValidator_NoNonNaturalEdifices">
+          <radius>4</radius>
+        </li>
+      </validators>
+	  <warnOnFail>false</warnOnFail>
+    </genStep>
+  </GenStepDef>
+  
+  <!-- rockformation 2x2 -->
+  
+  <GenStepDef>
+    <defName>sd_ocean_genstep_rockformation_22x</defName>
+    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <order>534</order>
+    <genStep Class="sd_ocean.GenStep_ScatterThings_ocean">
+      <thingDef>sd_ocean_rockformation_22x</thingDef>
+			<allowOnWater>false</allowOnWater>
+			<minSpacing>25</minSpacing>
+      <extraNoBuildEdgeDist>0</extraNoBuildEdgeDist>
+      <countPer10kCellsRange>
+        <min>1</min>
+        <max>3</max>
+      </countPer10kCellsRange>
+      <clearSpaceSize>30</clearSpaceSize>
+      <neededTerrainAffordance>Light</neededTerrainAffordance>
+      <validators>
+        <li Class="ScattererValidator_Buildable">
+          <radius>6</radius>
+          <affordance>Light</affordance>
+        </li>
+        <li Class="ScattererValidator_NoNonNaturalEdifices">
+          <radius>6</radius>
+        </li>
+      </validators>
+	  <warnOnFail>false</warnOnFail>
+    </genStep>
+  </GenStepDef>
+  
+  <!-- ship wreckage -->
+  
+  <!-- wood ship wreck 2x2 -->
+  
+  <GenStepDef>
+    <defName>sd_ocean_genstep_wreckage_ship_22x</defName>
+    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <order>535</order>
+    <genStep Class="sd_ocean.GenStep_ScatterThings_ocean">
+      <thingDef>sd_ocean_wreckage_ship_22x</thingDef>
+			<allowOnWater>false</allowOnWater>
+			<minSpacing>55</minSpacing>
+      <extraNoBuildEdgeDist>0</extraNoBuildEdgeDist>
+      <countPer10kCellsRange>
+        <min>0.3</min>
+        <max>0.5</max>
+      </countPer10kCellsRange>
+      <clearSpaceSize>30</clearSpaceSize>
+      <neededTerrainAffordance>Light</neededTerrainAffordance>
+      <validators>
+        <li Class="ScattererValidator_Buildable">
+          <radius>4</radius>
+          <affordance>Light</affordance>
+        </li>
+        <li Class="ScattererValidator_NoNonNaturalEdifices">
+          <radius>4</radius>
+        </li>
+      </validators>
+	  <warnOnFail>false</warnOnFail>
+    </genStep>
+  </GenStepDef>
+  
+  <!-- ice floes on ocean tiles -->
+  
+  <!-- 1x1 -->
+  
+  <GenStepDef>
+    <defName>sd_ocean_genstep_floes_11x</defName>
+    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <order>555</order>
+    <genStep Class="sd_ocean.GenStep_ScatterFloes_ocean">
+      <thingDef>sd_ocean_floe_11x</thingDef>
+			<allowOnWater>true</allowOnWater>
+			<minSpacing>1</minSpacing>
+      <extraNoBuildEdgeDist>0</extraNoBuildEdgeDist>
+      <countPer10kCellsRange>
+        <min>50</min>
+        <max>75</max>
+      </countPer10kCellsRange>
+      <clearSpaceSize>0</clearSpaceSize>
+      <neededTerrainAffordance>Undefined</neededTerrainAffordance>
+      <validators>
+        <li Class="ScattererValidator_Buildable">
+          <radius>4</radius>
+          <affordance>Undefined</affordance>
+        </li>
+        <li Class="ScattererValidator_NoNonNaturalEdifices">
+          <radius>4</radius>
+        </li>
+      </validators>
+	  <warnOnFail>false</warnOnFail>
+    </genStep>
+  </GenStepDef>
+  
+  <!-- 2x2 -->
+  
+  <GenStepDef>
+    <defName>sd_ocean_genstep_floes_22x</defName>
+    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <order>556</order>
+    <genStep Class="sd_ocean.GenStep_ScatterFloes_ocean">
+      <thingDef>sd_ocean_floe_22x</thingDef>
+			<allowOnWater>true</allowOnWater>
+			<minSpacing>2</minSpacing>
+      <extraNoBuildEdgeDist>0</extraNoBuildEdgeDist>
+      <countPer10kCellsRange>
+        <min>25</min>
+        <max>35</max>
+      </countPer10kCellsRange>
+      <clearSpaceSize>0</clearSpaceSize>
+      <neededTerrainAffordance>Undefined</neededTerrainAffordance>
+      <validators>
+        <li Class="ScattererValidator_Buildable">
+          <radius>4</radius>
+          <affordance>Undefined</affordance>
+        </li>
+        <li Class="ScattererValidator_NoNonNaturalEdifices">
+          <radius>4</radius>
+        </li>
+      </validators>
+	  <warnOnFail>false</warnOnFail>
+    </genStep>
+  </GenStepDef>
+  
+  <!-- 3x3 -->
+  
+  <GenStepDef>
+    <defName>sd_ocean_genstep_floes_33x</defName>
+    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <order>557</order>
+    <genStep Class="sd_ocean.GenStep_ScatterFloes_ocean">
+      <thingDef>sd_ocean_floe_33x</thingDef>
+			<allowOnWater>true</allowOnWater>
+			<minSpacing>3</minSpacing>
+      <extraNoBuildEdgeDist>0</extraNoBuildEdgeDist>
+      <countPer10kCellsRange>
+        <min>12</min>
+        <max>25</max>
+      </countPer10kCellsRange>
+      <clearSpaceSize>0</clearSpaceSize>
+      <neededTerrainAffordance>Undefined</neededTerrainAffordance>
+      <validators>
+        <li Class="ScattererValidator_Buildable">
+          <radius>4</radius>
+          <affordance>Undefined</affordance>
+        </li>
+        <li Class="ScattererValidator_NoNonNaturalEdifices">
+          <radius>4</radius>
+        </li>
+      </validators>
+	  <warnOnFail>false</warnOnFail>
+    </genStep>
+  </GenStepDef>
+  
+  
+</Defs>

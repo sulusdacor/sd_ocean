@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+	<!-- ========== retrieval station ============== -->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>sd_ocean_retrievalstation</defName>
+	<thingClass>Building_WorkTable</thingClass>
+    <label>retrieval station</label>
+	<description>This building offers your pawns an option to search the wreckage on the ocean ground for ressources. (a job for your miners)</description>
+    <graphicData>
+      <texPath>sd_ocean/buildings/retrievalstation/sd_ocean_retrievalstation</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <size>(3,3)</size>
+	<altitudeLayer>Building</altitudeLayer>
+    <Passability>PassThroughOnly</Passability>
+    <pathCost>70</pathCost>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>false</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <coversFloor>false</coversFloor>
+    <statBases>
+		<MaxHitPoints>180</MaxHitPoints>
+		<WorkToBuild>2500</WorkToBuild>
+		<Flammability>0.0</Flammability>
+		<Beauty>3</Beauty>
+    </statBases>
+	<useHitPoints>True</useHitPoints>
+	<CostList>
+      <Steel>50</Steel>
+    </CostList>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+	  <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>75</costStuffCount>
+    <rotatable>true</rotatable>
+    <holdsRoof>false</holdsRoof>
+    <blockLight>false</blockLight>
+	<building>
+			<!-- <workSpeedPenaltyOutdoors>true</workSpeedPenaltyOutdoors> -->
+			<workSpeedPenaltyTemperature>true</workSpeedPenaltyTemperature>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+	</building>	
+	<inspectorTabs>
+		<li>ITab_Bills</li>
+    </inspectorTabs>
+	<hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-2)</interactionCellOffset>
+	<comps>
+		<li>
+			<compClass>CompReportWorkSpeed</compClass>
+		</li>
+		<li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+	</comps>
+	<placeWorkers>
+			<li>PlaceWorker_ReportWorkSpeedPenalties</li>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+			<li>sd_ocean.Placeworker_onwaterglowspot</li>
+	</placeWorkers>
+	<DesignationCategory>Production</DesignationCategory>
+	<terrainAffordanceNeeded>Undefined</terrainAffordanceNeeded>
+	<minifiedDef>MinifiedFurniture</minifiedDef>
+	<researchPrerequisites>
+		<li>sd_ocean_research_retrievalstation</li>
+	</researchPrerequisites>
+  </ThingDef>
+  
+  
+  
+  
+</ThingDefs>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+	<!-- =============== abstract recipe ============== -->
+
+	<RecipeDef Name="sd_ocean_convert_driftwood_base" Abstract="True">
+		
+		<description>Converts driftwood into woodlogs. (1 driftwood = 10 wood)</description>
+		<workerCounterClass>RecipeWorkerCounter_MakeStoneBlocks</workerCounterClass>
+		<jobString>Cutting woodlogs from driftwood.</jobString>
+		<workSpeedStat>StonecuttingSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<workSkillLearnFactor>0.25</workSkillLearnFactor>
+		<effectWorking>CutStone</effectWorking>
+		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+		<recipeUsers>
+			<li>CraftingSpot</li>
+		</recipeUsers>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>sd_ocean_driftwood</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<specialProducts>
+			<li>Butchery</li>
+		</specialProducts>
+	</RecipeDef>
+	
+	<!-- =============== recipe for 1 drift wood ============== -->
+	
+	<RecipeDef ParentName="sd_ocean_convert_driftwood_base">
+		<defName>sd_ocean_convert_driftwood</defName>
+		<label>cut driftwood</label>
+		<workAmount>1600</workAmount>
+		<targetCountAdjustment>10</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>sd_ocean_driftwood</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+	</RecipeDef>
+
+	<!-- =============== recipe for 5 drift wood ============== -->
+
+	<RecipeDef ParentName="sd_ocean_convert_driftwood_base">
+		<defName>sd_ocean_convert_driftwood_5times</defName>
+		<label>cut driftwood (10)</label>
+		<workAmount>8000</workAmount>
+		<targetCountAdjustment>50</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>sd_ocean_driftwood</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+	</RecipeDef>
+	
+</RecipeDefs>

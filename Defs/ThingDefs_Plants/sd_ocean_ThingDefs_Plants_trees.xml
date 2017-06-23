@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--======================= common willow  ========================-->
+
+   <ThingDef ParentName="TreeBase">
+    <defName>sd_ocean_plant_common_willow</defName>
+    <label>common willow</label>
+    <description>A softwood tree. Grows fast, but yield little useful wood.</description>
+    <graphicData>
+      <texPath>sd_ocean/plants/common_willow</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <statBases>
+      <Beauty>3</Beauty>
+    </statBases>
+    <ingestible>
+      <nutrition>0.75</nutrition>
+    </ingestible>
+    <plant>
+			<growDays>15.05</growDays>
+			<leaflessGraphicPath>Things/Plant/TreeOak_Leafless</leaflessGraphicPath>
+			<harvestWork>650</harvestWork>
+      <harvestYield>30</harvestYield>
+    </plant>
+  </ThingDef>
+  
+   <!--======================= palm tree on beach  ========================-->
+
+   <ThingDef ParentName="TreeBase">
+    <defName>sd_ocean_plant_palm_beach</defName>
+    <label>palm tree</label>
+    <description>A softwood tree. Grows fast, but yield little useful wood.</description>
+    <graphicData>
+      <texPath>sd_ocean/plants/palm</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+	  <shadowData>
+        <volume>(0.15, 0.3, 0.1)</volume>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <Beauty>3</Beauty>
+    </statBases>
+    <ingestible>
+      <nutrition>0.75</nutrition>
+    </ingestible>
+    <plant>
+			<fertilityMin>0.05</fertilityMin>
+			<fertilitySensitivity>1.0</fertilitySensitivity>
+			<growDays>15.05</growDays>
+			<leaflessGraphicPath>Things/Plant/TreeOak_Leafless</leaflessGraphicPath>
+			<harvestWork>650</harvestWork>
+			<harvestYield>30</harvestYield>
+			<wildClusterSizeRange>
+				<min>5</min>
+				<max>30</max>
+			</wildClusterSizeRange>
+    </plant>
+  </ThingDef>
+  
+  <!--======================= palm tree  ========================-->
+
+   <ThingDef ParentName="TreeBase">
+    <defName>sd_ocean_plant_palm</defName>
+    <label>palm tree</label>
+    <description>A softwood tree. Grows fast, but yield little useful wood.</description>
+    <graphicData>
+      <texPath>sd_ocean/plants/palm</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+	  <shadowData>
+        <volume>(0.15, 0.3, 0.1)</volume>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <Beauty>3</Beauty>
+    </statBases>
+    <ingestible>
+      <nutrition>0.75</nutrition>
+    </ingestible>
+    <plant>
+			<growDays>15.05</growDays>
+			<leaflessGraphicPath>Things/Plant/TreeOak_Leafless</leaflessGraphicPath>
+			<harvestWork>650</harvestWork>
+			<harvestYield>30</harvestYield>
+			<wildClusterSizeRange>
+				<min>5</min>
+				<max>30</max>
+			</wildClusterSizeRange>
+    </plant>
+  </ThingDef>
+  
+  <!--======================= tree stump  ========================-->
+
+   <ThingDef ParentName="TreeBase">
+    <defName>sd_ocean_plant_tree_stump</defName>
+    <label>tree stump</label>
+    <description>A softwood tree stump. Some plants still grow on this rest of a tree. You can harvest it, but they yield little useful wood.</description>
+    <graphicData>
+      <texPath>sd_ocean/plants/tree_stump</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <statBases>
+      <Beauty>1</Beauty>
+    </statBases>
+    <ingestible>
+      <nutrition>0.05</nutrition>
+    </ingestible>
+    <plant>
+			<growDays>10</growDays>
+			<leaflessGraphicPath>sd_ocean/plants/leafless/tree_stump</leaflessGraphicPath>
+			<harvestWork>650</harvestWork>
+			<harvestYield>15</harvestYield>
+			<reproduceRadius>15</reproduceRadius>
+			<wildClusterSizeRange>
+				<min>1</min>
+				<max>2</max>
+			</wildClusterSizeRange>
+			<wildClusterRadius>10</wildClusterRadius>
+			<visualSizeRange>
+				<min>1.3</min>
+				<max>1.7</max>
+			</visualSizeRange>
+			
+			<!--	remove below if not in other biomes wanted, only low base values	-->
+	  
+		<wildBiomes>
+			<Tundra>0.05</Tundra>
+			<BorealForest>0.05</BorealForest>
+			<TemperateForest>0.05</TemperateForest>
+			<TropicalRainforest>0.05</TropicalRainforest>
+		</wildBiomes>
+    </plant>
+  </ThingDef>
+
+</Defs>

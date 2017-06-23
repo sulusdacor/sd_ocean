@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>sd_ocean_brokencomponent</defName>
+    <label>broken component</label>
+	<description></description>
+    <graphicData>
+		<texPath>sd_ocean/items/broken_component/sd_ocean_item_brokencomponent</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<statBases>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Flammability>1</Flammability>
+		<Mass>0.2</Mass>
+		<DeteriorationRate>1.0</DeteriorationRate>
+    </statBases>
+    <soundDrop>ChunkSlag_Drop</soundDrop>
+    <thingCategories>
+		<li>Chunks</li>
+    </thingCategories>
+	<butcherProducts>
+		<Steel>2</Steel>
+    </butcherProducts>
+	<tradeability>Never</tradeability>
+  </ThingDef>
+	
+  
+</Defs>

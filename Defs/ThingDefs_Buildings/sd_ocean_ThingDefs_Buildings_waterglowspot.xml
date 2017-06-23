@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+	<!-- ========== waterglowspot ============== -->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>sd_ocean_waterglowspot</defName>
+	<thingClass>Building</thingClass>
+    <label>waterglowspot</label>
+	<description>It looks like some ocean creatures glow near the ground. Your scientist are not sure what is causing this, but some divers could spot the remains of an old space ship near the ground.</description>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Standable</passability>
+    <blockWind>false</blockWind>
+    <castEdgeShadows>false</castEdgeShadows>
+    <fillPercent>0</fillPercent>
+    <coversFloor>false</coversFloor>
+    <statBases>
+		<Flammability>0.0</Flammability>
+		<Beauty>3</Beauty>
+    </statBases>
+    <rotatable>false</rotatable>
+    <holdsRoof>false</holdsRoof>
+    <staticSunShadowHeight>0.0</staticSunShadowHeight>
+    <blockLight>false</blockLight>
+    <mineable>false</mineable>
+    <useHitPoints>false</useHitPoints>
+	<building>
+      <isInert>true</isInert>
+      <isEdifice>false</isEdifice>
+      <deconstructible>false</deconstructible>
+      <claimable>false</claimable>
+    </building>	
+	<graphicData>
+      <texPath>sd_ocean/buildings/waterglowspot/sd_ocean_waterglowspot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <size>(3,3)</size>
+	<comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(120,205,230,0)</glowColor>
+      </li>
+    </comps>
+	<neverOverlapFloors>true</neverOverlapFloors>
+	<tickerType>Never</tickerType>
+  </ThingDef>
+  
+  
+</ThingDefs>

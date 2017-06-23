@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef Name="sd_ocean_RockBase" ParentName="sd_ocean_NaturalBase" Abstract="True" >
+    <description>Althrough mostly washed out by the elements you miners might be able to get some ressouces out of these rocks.</description>
+	<thingClass>Mineable</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+	<rotatable>false</rotatable>
+	<passability>PassThroughOnly</passability>
+		<pathCost>15</pathCost>
+	<castEdgeShadows>true</castEdgeShadows>
+    <blockWind>true</blockWind> 
+    <fillPercent>1</fillPercent>
+	<blockPlants>true</blockPlants>
+	<mineable>true</mineable>
+    <statBases>
+      <Flammability>0</Flammability>
+	  <Beauty>-10</Beauty>
+    </statBases>
+	<neverOverlapFloors>true</neverOverlapFloors>
+	<tickerType>Never</tickerType>
+    <building>
+      <isInert>true</isInert>
+      <isNaturalRock>true</isNaturalRock>
+      <canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
+      <deconstructible>false</deconstructible>
+    </building>
+	<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+  </ThingDef>
+
+
+
+	<!-- ========== rockformation 1x1 ============== -->
+
+  <ThingDef ParentName="sd_ocean_RockBase">
+	<defName>sd_ocean_rockformation_11x</defName>
+    <label>small rock formation</label>
+	<graphicData>
+      <texPath>sd_ocean/buildings/rockformation/1x1</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <statBases>
+      <MaxHitPoints>1250</MaxHitPoints>
+    </statBases>
+	<building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>Steel</mineableThing>
+      <mineableYield>25</mineableYield>
+    </building>	
+  </ThingDef>
+  
+  <!-- ========== rockformation 2x2 ============== -->
+
+  <ThingDef ParentName="sd_ocean_RockBase">
+	<defName>sd_ocean_rockformation_22x</defName>
+    <label>rock formation</label>
+	<graphicData>
+      <texPath>sd_ocean/buildings/rockformation/2x2</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <size>(2,2)</size>
+    <statBases>
+      <MaxHitPoints>2500</MaxHitPoints>
+    </statBases>
+	<building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>Steel</mineableThing>
+      <mineableYield>50</mineableYield>
+    </building>	
+  </ThingDef>  
+  
+</ThingDefs>

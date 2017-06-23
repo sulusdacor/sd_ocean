@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffGiverSetDef>
+    <defName>sd_ocean_OrganicStandard</defName>
+    <hediffGivers>
+      
+      
+
+        <!-- Responsive and special -->
+      <li Class="HediffGiver_RandomAgeCurved">
+        <hediff>sd_ocean_scurvy</hediff>
+        <partsToAffect>
+          <li>Torso</li>
+        </partsToAffect>
+        <ageFractionMtbDaysCurve>
+          <points>
+            <li>(0, 99999999)</li>
+            <li>(0.5, 99999999)</li>
+            <li>(0.6, 2500)</li>
+            <li>(1, 300)</li>
+          </points>
+        </ageFractionMtbDaysCurve>
+      </li>
+      
+     
+    </hediffGivers>
+  </HediffGiverSetDef>
+  
+</Defs>
