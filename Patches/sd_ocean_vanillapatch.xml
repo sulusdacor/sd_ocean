@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+ <!--================================ patches for vanilla watery stuff ======================================-->
+ 
+	<!--========================= affordance tests + =============================-->
+	
+	<!--========================= + adding affordance to build =============================-->
+ 
+	<Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+		<li Class="PatchOperationTest">
+		  <xpath>*/TerrainDef[defName = "WaterDeep"]/affordances</xpath>
+		  <success>Invert</success>
+		</li>
+		<li Class="PatchOperationAdd">
+		  <xpath>*/TerrainDef[defName = "WaterDeep"]</xpath>
+		  <value>
+			<affordances />
+		  </value>
+		</li>
+	  </operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationadd">
+		<xpath>*/TerrainDef[defName = "WaterDeep"]/affordances</xpath>
+		<value>
+				<li>Undefined</li>
+		</value>
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+		<li Class="PatchOperationTest">
+		  <xpath>*/TerrainDef[defName = "WaterOceanDeep"]/affordances</xpath>
+		  <success>Invert</success>
+		</li>
+		<li Class="PatchOperationAdd">
+		  <xpath>*/TerrainDef[defName = "WaterOceanDeep"]</xpath>
+		  <value>
+			<affordances />
+		  </value>
+		</li>
+	  </operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationadd">
+		<xpath>*/TerrainDef[defName = "WaterOceanDeep"]/affordances</xpath>
+		<value>
+				<li>Undefined</li>
+		</value>
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+		<li Class="PatchOperationTest">
+		  <xpath>*/TerrainDef[defName = "WaterMovingDeep"]/affordances</xpath>
+		  <success>Invert</success>
+		</li>
+		<li Class="PatchOperationAdd">
+		  <xpath>*/TerrainDef[defName = "WaterMovingDeep"]</xpath>
+		  <value>
+			<affordances />
+		  </value>
+		</li>
+	  </operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationadd">
+		<xpath>*/TerrainDef[defName = "WaterMovingDeep"]/affordances</xpath>
+		<value>
+				<li>Undefined</li>
+		</value>
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+		<li Class="PatchOperationTest">
+		  <xpath>*/TerrainDef[defName = "WaterShallow"]/affordances</xpath>
+		  <success>Invert</success>
+		</li>
+		<li Class="PatchOperationAdd">
+		  <xpath>*/TerrainDef[defName = "WaterShallow"]</xpath>
+		  <value>
+			<affordances />
+		  </value>
+		</li>
+	  </operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationadd">
+		<xpath>*/TerrainDef[defName = "WaterShallow"]/affordances</xpath>
+		<value>
+				<li>Undefined</li>
+		</value>
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+		<li Class="PatchOperationTest">
+		  <xpath>*/TerrainDef[defName = "WaterOceanShallow"]/affordances</xpath>
+		  <success>Invert</success>
+		</li>
+		<li Class="PatchOperationAdd">
+		  <xpath>*/TerrainDef[defName = "WaterOceanShallow"]</xpath>
+		  <value>
+			<affordances />
+		  </value>
+		</li>
+	  </operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationadd">
+		<xpath>*/TerrainDef[defName = "WaterOceanShallow"]/affordances</xpath>
+		<value>
+				<li>Undefined</li>
+		</value>
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+		<li Class="PatchOperationTest">
+		  <xpath>*/TerrainDef[defName = "WaterMovingShallow"]/affordances</xpath>
+		  <success>Invert</success>
+		</li>
+		<li Class="PatchOperationAdd">
+		  <xpath>*/TerrainDef[defName = "WaterMovingShallow"]</xpath>
+		  <value>
+			<affordances />
+		  </value>
+		</li>
+	  </operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationadd">
+		<xpath>*/TerrainDef[defName = "WaterMovingShallow"]/affordances</xpath>
+		<value>
+				<li>Undefined</li>
+		</value>
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+		<li Class="PatchOperationTest">
+		  <xpath>*/TerrainDef[defName = "Mud"]/affordances</xpath>
+		  <success>Invert</success>
+		</li>
+		<li Class="PatchOperationAdd">
+		  <xpath>*/TerrainDef[defName = "Mud"]</xpath>
+		  <value>
+			<affordances />
+		  </value>
+		</li>
+	  </operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationadd">
+		<xpath>*/TerrainDef[defName = "Mud"]/affordances</xpath>
+		<value>
+				<li>Undefined</li>
+		</value>
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+		<li Class="PatchOperationTest">
+		  <xpath>*/TerrainDef[defName = "Marsh"]/affordances</xpath>
+		  <success>Invert</success>
+		</li>
+		<li Class="PatchOperationAdd">
+		  <xpath>*/TerrainDef[defName = "Marsh"]</xpath>
+		  <value>
+			<affordances />
+		  </value>
+		</li>
+	  </operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationadd">
+		<xpath>*/TerrainDef[defName = "Marsh"]/affordances</xpath>
+		<value>
+				<li>Undefined</li>
+		</value>
+	</Operation>
+	
+	<!--========================= changeable tests + =============================-->
+	
+	<!--========================= + setting changeable to true =============================-->
+	
+	<Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+		<li Class="PatchOperationTest">
+		  <xpath>*/TerrainDef[defName = "WaterDeep"]/changeable</xpath>
+		  <success>Invert</success>
+		</li>
+		<li Class="PatchOperationAdd">
+		  <xpath>*/TerrainDef[defName = "WaterDeep"]</xpath>
+		  <value>
+			<changeable />
+		  </value>
+		</li>
+	  </operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/TerrainDef[defName = "WaterDeep"]/changeable</xpath>
+		<value>
+			<changeable>true</changeable>
+		</value>
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+		<li Class="PatchOperationTest">
+		  <xpath>*/TerrainDef[defName = "WaterOceanDeep"]/changeable</xpath>
+		  <success>Invert</success>
+		</li>
+		<li Class="PatchOperationAdd">
+		  <xpath>*/TerrainDef[defName = "WaterOceanDeep"]</xpath>
+		  <value>
+			<changeable />
+		  </value>
+		</li>
+	  </operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/TerrainDef[defName = "WaterOceanDeep"]/changeable</xpath>
+		<value>
+			<changeable>true</changeable>
+		</value>
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+		<li Class="PatchOperationTest">
+		  <xpath>*/TerrainDef[defName = "WaterMovingDeep"]/changeable</xpath>
+		  <success>Invert</success>
+		</li>
+		<li Class="PatchOperationAdd">
+		  <xpath>*/TerrainDef[defName = "WaterMovingDeep"]</xpath>
+		  <value>
+			<changeable />
+		  </value>
+		</li>
+	  </operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/TerrainDef[defName = "WaterMovingDeep"]/changeable</xpath>
+		<value>
+			<changeable>true</changeable>
+		</value>
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+		<li Class="PatchOperationTest">
+		  <xpath>*/TerrainDef[defName = "WaterShallow"]/changeable</xpath>
+		  <success>Invert</success>
+		</li>
+		<li Class="PatchOperationAdd">
+		  <xpath>*/TerrainDef[defName = "WaterShallow"]</xpath>
+		  <value>
+			<changeable />
+		  </value>
+		</li>
+	  </operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/TerrainDef[defName = "WaterShallow"]/changeable</xpath>
+		<value>
+			<changeable>true</changeable>
+		</value>
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+		<li Class="PatchOperationTest">
+		  <xpath>*/TerrainDef[defName = "WaterOceanShallow"]/changeable</xpath>
+		  <success>Invert</success>
+		</li>
+		<li Class="PatchOperationAdd">
+		  <xpath>*/TerrainDef[defName = "WaterOceanShallow"]</xpath>
+		  <value>
+			<changeable />
+		  </value>
+		</li>
+	  </operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/TerrainDef[defName = "WaterOceanShallow"]/changeable</xpath>
+		<value>
+			<changeable>true</changeable>
+		</value>
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+		<li Class="PatchOperationTest">
+		  <xpath>*/TerrainDef[defName = "WaterMovingShallow"]/changeable</xpath>
+		  <success>Invert</success>
+		</li>
+		<li Class="PatchOperationAdd">
+		  <xpath>*/TerrainDef[defName = "WaterMovingShallow"]</xpath>
+		  <value>
+			<changeable />
+		  </value>
+		</li>
+	  </operations>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/TerrainDef[defName = "WaterMovingShallow"]/changeable</xpath>
+		<value>
+			<changeable>true</changeable>
+		</value>
+	</Operation>
+
+</Patch>
