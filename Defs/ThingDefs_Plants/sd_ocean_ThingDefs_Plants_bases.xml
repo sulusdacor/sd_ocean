@@ -24,7 +24,6 @@
     <plant>
 			<fertilityMin>0.5</fertilityMin>
 			<fertilitySensitivity>1.0</fertilitySensitivity>
-			<harvestDestroys>true</harvestDestroys>
       <soundHarvesting>Harvest_Standard</soundHarvesting>
       <soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
       <harvestWork>190</harvestWork>
@@ -66,7 +65,6 @@
       <soundHarvestFinish>Harvest_Tree_Finish</soundHarvestFinish>
       <sowWork>1500</sowWork>
       <harvestWork>800</harvestWork>
-      <harvestDestroys>true</harvestDestroys>
       <harvestedThingDef>WoodLog</harvestedThingDef>
       <harvestYield>50</harvestYield>
       <harvestTag>Wood</harvestTag>

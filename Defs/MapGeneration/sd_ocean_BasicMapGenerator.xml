@@ -13,7 +13,7 @@
   
   <GenStepDef>
     <defName>sd_ocean_genstep_RockChunks</defName>
-    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
     <order>233</order>
     <genStep Class="sd_ocean.GenStep_RockChunks_ocean"/>
   </GenStepDef>
@@ -22,7 +22,7 @@
   
   <GenStepDef>
     <defName>sd_ocean_genstep_driftwood</defName>
-    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
     <order>244</order>
     <genStep Class="sd_ocean.GenStep_driftwood_ocean"/>
   </GenStepDef>
@@ -31,7 +31,7 @@
   
   <GenStepDef>
     <defName>sd_ocean_genstep_ScatterRuinsSimple</defName>
-    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
     <order>311</order>
     <genStep Class="GenStep_ScatterRuinsSimple">
 			<allowOnWater>true</allowOnWater>
@@ -46,7 +46,7 @@
   
   <GenStepDef>
     <defName>sd_ocean_genstep_SteamGeysers</defName>
-    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
     <order>522</order>
     <genStep Class="sd_ocean.GenStep_ScatterThings_ocean">
       <thingDef>SteamGeyser</thingDef>
@@ -76,7 +76,7 @@
   
   <GenStepDef>
     <defName>sd_ocean_genstep_waterglowspot</defName>
-    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
     <order>523</order>
     <genStep Class="sd_ocean.GenStep_ScatterThings_ocean">
       <thingDef>sd_ocean_waterglowspot</thingDef>
@@ -106,7 +106,7 @@
   
   <GenStepDef>
     <defName>sd_ocean_genstep_rockformation_11x</defName>
-    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
     <order>533</order>
     <genStep Class="sd_ocean.GenStep_ScatterThings_ocean">
       <thingDef>sd_ocean_rockformation_11x</thingDef>
@@ -136,7 +136,7 @@
   
   <GenStepDef>
     <defName>sd_ocean_genstep_rockformation_22x</defName>
-    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
     <order>534</order>
     <genStep Class="sd_ocean.GenStep_ScatterThings_ocean">
       <thingDef>sd_ocean_rockformation_22x</thingDef>
@@ -168,7 +168,7 @@
   
   <GenStepDef>
     <defName>sd_ocean_genstep_wreckage_ship_22x</defName>
-    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
     <order>535</order>
     <genStep Class="sd_ocean.GenStep_ScatterThings_ocean">
       <thingDef>sd_ocean_wreckage_ship_22x</thingDef>
@@ -200,7 +200,7 @@
   
   <GenStepDef>
     <defName>sd_ocean_genstep_floes_11x</defName>
-    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
     <order>555</order>
     <genStep Class="sd_ocean.GenStep_ScatterFloes_ocean">
       <thingDef>sd_ocean_floe_11x</thingDef>
@@ -230,7 +230,7 @@
   
   <GenStepDef>
     <defName>sd_ocean_genstep_floes_22x</defName>
-    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
     <order>556</order>
     <genStep Class="sd_ocean.GenStep_ScatterFloes_ocean">
       <thingDef>sd_ocean_floe_22x</thingDef>
@@ -260,7 +260,7 @@
   
   <GenStepDef>
     <defName>sd_ocean_genstep_floes_33x</defName>
-    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
     <order>557</order>
     <genStep Class="sd_ocean.GenStep_ScatterFloes_ocean">
       <thingDef>sd_ocean_floe_33x</thingDef>

@@ -1,0 +1,24 @@
+personal changelog for mod "[sd] ocean biome"
+
+- 23/06/2017
+
+	- start update to a17
+	- added sellprice factor to buildingbase
+	- compiled code to with new a17
+	- added patchfolder with water patches, same as bridges mod, affordance undefined added and changeable to true
+
+- 31/7/2017
+
+	- updated biomedef
+	- updated mapgendef
+	- removed harvest destroys xml tag, since it was removed with a17
+	- updated bodypart def xml with new tags xml list
+
+- 03/08/2017
+
+	- updated bodyparts to remove errors
+	- on algae farm placeworker: added the vanilla shallow water options moving and ocean, added marsh water options (all includes bridges, which is the part that makes the mod needed)
+	- updated algaefarm linkable texture to new a17 standard 320x320
+
+
+

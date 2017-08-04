@@ -2,13 +2,13 @@
 <ModMetaData>
   <name>[sd] ocean biome</name>
   <author>sulusdacor</author>
-  <targetVersion>0.16.1393</targetVersion>
+  <targetVersion>0.17.1557</targetVersion>
   <url>https://ludeon.com/forums/index.php?topic=26276.0</url>
 	<description>"ocean biome"
 	
-	--- work in progress ---
+	This needs [sd]bridges to be loaded before!
 	
-	(does need the bridges mod to load before this one)
+	--- work in progress ---
 	
 	mod solution for more water
 	
