@@ -1,5 +1,7 @@
 # sd_ocean
 
+(master branch on github has the latest version of the mod)
+
 work in progress ocean biome by sulusdacor
 
 currently somewhat working with a17
