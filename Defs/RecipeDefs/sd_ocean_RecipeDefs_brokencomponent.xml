@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<RecipeDefs>
+<Defs>
 
 	<!-- =============== abstract recipe ============== -->
 
@@ -8,7 +8,7 @@
 		<description>Converts broken components into steel. (1 broken component = 2 steel)</description>
 		<workerCounterClass>RecipeWorkerCounter_MakeStoneBlocks</workerCounterClass>
 		<jobString>breaking down component parts into steel.</jobString>
-		<workSpeedStat>StonecuttingSpeed</workSpeedStat>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
 		<workSkill>Crafting</workSkill>
 		<workSkillLearnFactor>0.25</workSkillLearnFactor>
 		<effectWorking>CutStone</effectWorking>
@@ -30,7 +30,7 @@
 		<description>Converts broken components into components. (3 broken component = 1 component)</description>
 		<workerCounterClass>RecipeWorkerCounter_MakeStoneBlocks</workerCounterClass>
 		<jobString>repairing broken components.</jobString>
-		<workSpeedStat>StonecuttingSpeed</workSpeedStat>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
 		<workSkill>Crafting</workSkill>
 		<workSkillLearnFactor>0.25</workSkillLearnFactor>
 		<effectWorking>CutStone</effectWorking>
@@ -83,10 +83,7 @@
 			<Component>1</Component>
 		</products>
 		<skillRequirements>
-			<li>
-				<skill>Crafting</skill>
-				<minLevel>10</minLevel>
-			</li>
+			<Crafting>10</Crafting>
 		</skillRequirements>
 	</RecipeDef>
 
@@ -129,4 +126,4 @@
 		</products>
 	</RecipeDef>
 	
-</RecipeDefs>
+</Defs>

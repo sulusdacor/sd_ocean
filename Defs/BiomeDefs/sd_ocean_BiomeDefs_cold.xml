@@ -17,11 +17,10 @@
 	<allowRivers>false</allowRivers>
 	<hasVirtualPlants>false</hasVirtualPlants>
 	<impassable>false</impassable>
-	<pathCost>
-		<points>
-			<li>(0, 10000)</li>
-		</points>
-    </pathCost>
+	<pathCost_spring>2750</pathCost_spring>
+    <pathCost_summer>2750</pathCost_summer>
+    <pathCost_fall>2750</pathCost_fall>
+    <pathCost_winter>44000</pathCost_winter>
 	<soundsAmbient>
       <li>AmbientNightInsects_Standard</li>
     </soundsAmbient>
@@ -134,8 +133,8 @@
       <DryThunderstorm>1.25</DryThunderstorm>
       <RainyThunderstorm>1.25</RainyThunderstorm>
       <FoggyRain>1.5</FoggyRain>
-      <SnowGentle>4</SnowGentle>
-      <SnowHard>4</SnowHard>
+      <SnowGentle>6</SnowGentle>
+      <SnowHard>6</SnowHard>
     </baseWeatherCommonalities>
 	
 	<wildPlants>
@@ -145,12 +144,15 @@
 		<PlantGrass>0.3</PlantGrass>
 		<PlantMoss>0.3</PlantMoss>
 		
+		<PlantChokevine>0.2</PlantChokevine>
+		
 		<PlantAstragalus>0.1</PlantAstragalus>
 		
 		<PlantRaspberry>0.01</PlantRaspberry>
 		<PlantBush>0.03</PlantBush>
       
 		<PlantDandelion>0.01</PlantDandelion>
+		
      
     </wildPlants>
 	

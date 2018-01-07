@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
 	<!-- ========== reroute station ============== -->
 
@@ -50,7 +50,6 @@
 	<building>
 			<ai_chillDestination>false</ai_chillDestination>
 			<soundAmbient>GeothermalPlant_Ambience</soundAmbient>
-			<ignoreNeedsPower>true</ignoreNeedsPower>
     </building>
     <constructEffect>ConstructMetal</constructEffect>
 	<researchPrerequisites>
@@ -63,4 +62,4 @@
   </ThingDef>
   
   
-</ThingDefs>
+</Defs>

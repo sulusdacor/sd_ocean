@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<RecipeDefs>
+<Defs>
 
 	<!-- =============== abstract recipe ============== -->
 
@@ -8,7 +8,7 @@
 		<description>Converts driftwood into woodlogs. (1 driftwood = 10 wood)</description>
 		<workerCounterClass>RecipeWorkerCounter_MakeStoneBlocks</workerCounterClass>
 		<jobString>Cutting woodlogs from driftwood.</jobString>
-		<workSpeedStat>StonecuttingSpeed</workSpeedStat>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
 		<workSkill>Crafting</workSkill>
 		<workSkillLearnFactor>0.25</workSkillLearnFactor>
 		<effectWorking>CutStone</effectWorking>
@@ -64,4 +64,4 @@
 		</ingredients>
 	</RecipeDef>
 	
-</RecipeDefs>
+</Defs>

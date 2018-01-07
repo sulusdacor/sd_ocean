@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
-<BodyPartDefs>
+<Defs>
 
 	<!-- ============= crab stuff ============== -->
 
@@ -26,4 +26,4 @@
     <isAlive>false</isAlive>
   </BodyPartDef>
 
-</BodyPartDefs>
+</Defs>

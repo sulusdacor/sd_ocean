@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
 	<!-- ========================= algaefarm abstract ==========================-->
 	
@@ -52,9 +52,9 @@
       <Cleanliness>-3</Cleanliness>
     </statBases>
     <size>(1,1)</size>
-	<CostList>
+	<costList>
 		<WoodLog>50</WoodLog>
-    </CostList>
+    </costList>
     <fertility>1.4</fertility>
     <building>
 		<defaultPlantToGrow>sd_ocean_plant_algae</defaultPlantToGrow>
@@ -76,4 +76,4 @@
   </ThingDef>
 
   
-</ThingDefs>
+</Defs>

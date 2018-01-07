@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
   <ThingDef Name="sd_ocean_RockBase" ParentName="sd_ocean_NaturalBase" Abstract="True" >
     <description>Althrough mostly washed out by the elements you miners might be able to get some ressouces out of these rocks.</description>
@@ -74,4 +74,4 @@
     </building>	
   </ThingDef>  
   
-</ThingDefs>
+</Defs>

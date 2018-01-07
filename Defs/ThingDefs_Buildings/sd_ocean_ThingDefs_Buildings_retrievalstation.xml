@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
 	<!-- ========== retrieval station ============== -->
 
@@ -15,7 +15,7 @@
     </graphicData>
     <size>(3,3)</size>
 	<altitudeLayer>Building</altitudeLayer>
-    <Passability>PassThroughOnly</Passability>
+    <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
     <blockWind>true</blockWind>
     <castEdgeShadows>false</castEdgeShadows>
@@ -28,9 +28,9 @@
 		<Beauty>3</Beauty>
     </statBases>
 	<useHitPoints>True</useHitPoints>
-	<CostList>
+	<costList>
       <Steel>50</Steel>
-    </CostList>
+    </costList>
     <stuffCategories>
       <li>Metallic</li>
       <li>Woody</li>
@@ -65,7 +65,7 @@
 			<li>PlaceWorker_ShowFacilitiesConnections</li>
 			<li>sd_ocean.Placeworker_onwaterglowspot</li>
 	</placeWorkers>
-	<DesignationCategory>Production</DesignationCategory>
+	<designationCategory>Production</designationCategory>
 	<terrainAffordanceNeeded>Undefined</terrainAffordanceNeeded>
 	<minifiedDef>MinifiedFurniture</minifiedDef>
 	<researchPrerequisites>
@@ -76,4 +76,4 @@
   
   
   
-</ThingDefs>
+</Defs>

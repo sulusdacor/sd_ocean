@@ -17,11 +17,10 @@
 	<allowRivers>false</allowRivers>
 	<hasVirtualPlants>false</hasVirtualPlants>
 	<impassable>false</impassable>
-	<pathCost>
-		<points>
-			<li>(0, 10000)</li>
-		</points>
-    </pathCost>
+	<pathCost_spring>500</pathCost_spring>
+    <pathCost_summer>500</pathCost_summer>
+    <pathCost_fall>500</pathCost_fall>
+    <pathCost_winter>500</pathCost_winter>
 	<soundsAmbient>
       <li>AmbientNightInsects_Standard</li>
     </soundsAmbient>
@@ -151,17 +150,23 @@
 	<wildPlants>
 	
 		<sd_ocean_plant_algae>4.75</sd_ocean_plant_algae>
-		<sd_ocean_plant_fern>6.5</sd_ocean_plant_fern>
-		<sd_ocean_plant_reed>6.5</sd_ocean_plant_reed>
+		<sd_ocean_plant_fern>0.5</sd_ocean_plant_fern>
+		<sd_ocean_plant_reed>0.5</sd_ocean_plant_reed>
 		
 		<sd_ocean_plant_palm_beach>4.5</sd_ocean_plant_palm_beach>
-		<sd_ocean_plant_palm>3.5</sd_ocean_plant_palm>
+		<sd_ocean_plant_palm>2.5</sd_ocean_plant_palm>
      
-     
+		<PlantShrubLow>2.0</PlantShrubLow>
+		<PlantAlocasia>1.8</PlantAlocasia>
 
-		<PlantGrass>2.3</PlantGrass>
 		<PlantTallGrass>2.0</PlantTallGrass>
-		<PlantMoss>2.3</PlantMoss>
+
+		<PlantTreePalm>1.0</PlantTreePalm>
+		<PlantTreeBamboo>1.0</PlantTreeBamboo>
+		<PlantTreeCecropia>1.0</PlantTreeCecropia>
+		
+		<PlantClivia>0.07</PlantClivia>
+		<PlantRafflesia>0.0008</PlantRafflesia>
 		
 		<PlantAstragalus>0.1</PlantAstragalus>
 		
