@@ -4,7 +4,7 @@
 
 work in progress ocean biome by sulusdacor
 
-currently somewhat working with a17
+currently somewhat working with b18
 
 current "problems":
 
