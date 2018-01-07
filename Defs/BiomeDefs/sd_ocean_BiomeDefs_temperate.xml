@@ -17,11 +17,10 @@
 	<allowRivers>false</allowRivers>
 	<hasVirtualPlants>false</hasVirtualPlants>
 	<impassable>false</impassable>
-	<pathCost>
-		<points>
-			<li>(0, 10000)</li>
-		</points>
-    </pathCost>
+	<pathCost_spring>1000</pathCost_spring>
+    <pathCost_summer>1000</pathCost_summer>
+    <pathCost_fall>1000</pathCost_fall>
+    <pathCost_winter>27500</pathCost_winter>
 	<soundsAmbient>
       <li>AmbientNightInsects_Standard</li>
     </soundsAmbient>
@@ -163,9 +162,11 @@
 		<sd_ocean_plant_common_willow>0.5</sd_ocean_plant_common_willow>
 		<sd_ocean_plant_tree_stump>0.1</sd_ocean_plant_tree_stump>
 
+		<PlantBrambles>2.5</PlantBrambles>
 		<PlantGrass>2.3</PlantGrass>
 		<PlantTallGrass>2.0</PlantTallGrass>
 		<PlantMoss>2.3</PlantMoss>
+		<PlantChokevine>1.5</PlantChokevine>
 		
 		<PlantAstragalus>0.1</PlantAstragalus>
 		
@@ -174,9 +175,13 @@
       
 		<PlantDandelion>0.2</PlantDandelion>
 		
+		<PlantTreeWillow>1.0</PlantTreeWillow>
+		<PlantTreeCypress>0.5</PlantTreeCypress>
+		<PlantTreeMaple>0.06</PlantTreeMaple>
+		
 		<PlantTreeOak>0.5</PlantTreeOak>
 		<PlantTreePoplar>0.5</PlantTreePoplar>
-		<PlantTreePine>2.0</PlantTreePine>
+		<PlantTreePine>0.3</PlantTreePine>
 		<PlantTreeBirch>1.0</PlantTreeBirch>
      
     </wildPlants>

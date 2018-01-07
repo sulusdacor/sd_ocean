@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<WorkGivers>
-
+<Defs>
     <WorkGiverDef>
     <defName>sd_ocean_DoBillsRetrievalstation</defName>
     <label>do bills at retrieval station</label>
@@ -17,4 +16,4 @@
     </requiredCapacities>
   </WorkGiverDef>
 
-</WorkGivers>
+</Defs>
