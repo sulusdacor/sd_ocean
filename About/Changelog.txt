@@ -20,5 +20,13 @@ personal changelog for mod "[sd] ocean biome"
 	- on algae farm placeworker: added the vanilla shallow water options moving and ocean, added marsh water options (all includes bridges, which is the part that makes the mod needed)
 	- updated algaefarm linkable texture to new a17 standard 320x320
 
+- 29/12/2017
 
+	- update to b18
+	- updated some code stuff for b18
+	- added researchtab
+	- fixed roots <Defs>
+	- fixed recipe skillrequirement, to non list style
+	- adjusted abstract bases compared to the vanilla counterparts
+	
 
